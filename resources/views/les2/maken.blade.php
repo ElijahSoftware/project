@@ -40,7 +40,7 @@
             </div>
         </div>
     </section>
-    
+    @include('les2.postCo.footer')
     
 </body>
 </html>

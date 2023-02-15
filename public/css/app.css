@@ -1,6 +1,12 @@
 
 /* les2 */
-
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(22, 138, 138);
+}
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;

@@ -23,3 +23,4 @@ Route::get('/taken/{opdracht}', [TaakController::class, 'show']);
 Route::get('/post', [PostController::class, 'index']);  
 Route::get('post/maken',[PostController::class,'maken']);
 Route::post('post', [PostController::class,'opslaan']);
+Route::get('post/{kijk}', [PostController::class,'zien']);

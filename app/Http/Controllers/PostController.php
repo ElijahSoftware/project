@@ -10,7 +10,7 @@ class PostController extends Controller
     public function index()
     {
         
-        $maak = Post::all();
+        $maak = Post::latest()->get();
         return view('les2/post', compact('maak'));
     }
     public function maken()
@@ -22,7 +22,7 @@ class PostController extends Controller
     {
          $post = new Post;
 
-         $post->title = request('title');
+         $post->title = Request('title');
          $post->body = Request('body');
 
 
@@ -31,4 +31,10 @@ class PostController extends Controller
 
          return redirect('post');
     }
+
+    public function zien(Post $kijk){
+
+        return view('les2/postZien', compact('kijk'));
+    }
+
 }

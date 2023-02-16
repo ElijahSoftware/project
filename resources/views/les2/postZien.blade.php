@@ -46,15 +46,15 @@
 
             <div class="card">
                 <div class="card-block">
-                    <form method="POST">
-                        {{method_field('PATCH')}}
+                    <form method="POST" action="/post/{{$kijk->id }}/comments">
+                        {{ csrf_field() }}
                         <div class="form-group">
-                            <textarea class="form-control" name="body" id="body" placeholder="Schrijf Jouw Comment" cols="30" rows="10"></textarea>
+                            <textarea class="form-control" name="body" id="body" placeholder="Schrijf Jouw Comment" cols="30" rows="10" required></textarea>
                         </div>
-
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-outline-info"> Submit</button>
+                            <input type="hidden" name="post_id" id="post_id" value="{{$kijk->id}}">
                         </div>
 
 

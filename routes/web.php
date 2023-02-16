@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaakController;
@@ -24,3 +25,4 @@ Route::get('/post', [PostController::class, 'index']);
 Route::get('post/maken',[PostController::class,'maken']);
 Route::post('post', [PostController::class,'opslaan']);
 Route::get('post/{kijk}', [PostController::class,'zien']);
+Route::post('post/{kijk}/comments', [CommentsController::class, 'opslaan']);
